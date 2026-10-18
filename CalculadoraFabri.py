@@ -7,28 +7,26 @@ st.title("🔧 Calculadora Técnica de Eixo")
 st.markdown("### DIN 6885 • DIN 471 • ISO 68-1 / ISO 965 (M4 até M39)")
 
 # ==================== DADOS DAS NORMAS ====================
-# Tabela de roscas métricas (M4 a M39)
 rosas_data = {
-    "M4":   {"passos": [0.7, 0.5], "chanfro_padrao": 0.3},
-    "M5":   {"passos": [0.8, 0.5], "chanfro_padrao": 0.4},
-    "M6":   {"passos": [1.0, 0.75, 0.5], "chanfro_padrao": 0.5},
-    "M8":   {"passos": [1.25, 1.0, 0.75, 0.5], "chanfro_padrao": 0.5},
-    "M10":  {"passos": [1.5, 1.25, 1.0, 0.75, 0.5], "chanfro_padrao": 0.5},
-    "M12":  {"passos": [1.75, 1.5, 1.25, 0.75, 0.5], "chanfro_padrao": 0.5},
-    "M14":  {"passos": [2.0, 1.5, 1.0, 0.75], "chanfro_padrao": 0.6},
-    "M16":  {"passos": [2.0, 1.5, 1.0, 0.75], "chanfro_padrao": 0.6},
-    "M18":  {"passos": [2.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.6},
-    "M20":  {"passos": [2.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.5},
-    "M22":  {"passos": [2.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7},
-    "M24":  {"passos": [3.0, 2.0, 1.5, 1.0], "chanfro_padrao": 0.5},
-    "M27":  {"passos": [3.0, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7},
-    "M30":  {"passos": [3.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7},
-    "M33":  {"passos": [3.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7},
-    "M36":  {"passos": [4.0, 3.0, 2.0, 1.0], "chanfro_padrao": 0.8},
-    "M39":  {"passos": [4.0, 3.0, 2.0, 1.0], "chanfro_padrao": 0.8},
+    "M4":   {"d_eixo": 4.0, "passos": [0.7, 0.5], "chanfro_padrao": 0.3, "pescoço_padrao": 2.5},
+    "M5":   {"d_eixo": 5.0, "passos": [0.8, 0.5], "chanfro_padrao": 0.4, "pescoço_padrao": 2.5},
+    "M6":   {"d_eixo": 6.0, "passos": [1.0, 0.75, 0.5], "chanfro_padrao": 0.5, "pescoço_padrao": 2.5},
+    "M8":   {"d_eixo": 8.0, "passos": [1.25, 1.0, 0.75, 0.5], "chanfro_padrao": 0.5, "pescoço_padrao": 2.5},
+    "M10":  {"d_eixo": 10.0, "passos": [1.5, 1.25, 1.0, 0.75, 0.5], "chanfro_padrao": 0.5, "pescoço_padrao": 3.0},
+    "M12":  {"d_eixo": 12.0, "passos": [1.75, 1.5, 1.25, 0.75, 0.5], "chanfro_padrao": 0.5, "pescoço_padrao": 3.0},
+    "M14":  {"d_eixo": 14.0, "passos": [2.0, 1.5, 1.0, 0.75], "chanfro_padrao": 0.6, "pescoço_padrao": 3.0},
+    "M16":  {"d_eixo": 16.0, "passos": [2.0, 1.5, 1.0, 0.75], "chanfro_padrao": 0.6, "pescoço_padrao": 3.0},
+    "M18":  {"d_eixo": 18.0, "passos": [2.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.6, "pescoço_padrao": 3.0},
+    "M20":  {"d_eixo": 20.0, "passos": [2.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.5, "pescoço_padrao": 3.5},
+    "M22":  {"d_eixo": 22.0, "passos": [2.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7, "pescoço_padrao": 3.5},
+    "M24":  {"d_eixo": 24.0, "passos": [3.0, 2.0, 1.5, 1.0], "chanfro_padrao": 0.5, "pescoço_padrao": 3.5},
+    "M27":  {"d_eixo": 27.0, "passos": [3.0, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7, "pescoço_padrao": 3.5},
+    "M30":  {"d_eixo": 30.0, "passos": [3.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7, "pescoço_padrao": 3.5},
+    "M33":  {"d_eixo": 33.0, "passos": [3.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7, "pescoço_padrao": 3.5},
+    "M36":  {"d_eixo": 36.0, "passos": [4.0, 3.0, 2.0, 1.0], "chanfro_padrao": 0.8, "pescoço_padrao": 4.0},
+    "M39":  {"d_eixo": 39.0, "passos": [4.0, 3.0, 2.0, 1.0], "chanfro_padrao": 0.8, "pescoço_padrao": 4.0},
 }
 
-# Tabela de chavetas (DIN 6885)
 def get_chaveta(d):
     if d <= 22:
         return 6.0, 6.0, 3.5, 2.8, 18.0
@@ -37,7 +35,6 @@ def get_chaveta(d):
     else:
         return 10.0, 8.0, 4.5, 3.8, 25.0
 
-# Tabela de anel elástico (DIN 471)
 def get_anel(d):
     if d == 20:
         return 1.2, 1.3, 0.5, 19.0
@@ -53,19 +50,23 @@ def get_anel(d):
 # ==================== SIDEBAR ====================
 st.sidebar.header("Dados de Entrada")
 
-# Seleção de rosca
-rosca_selecionada = st.sidebar.selectbox("Rosca (M)", list(rosas_data.keys()), index=10)  # M24 default
+rosca_selecionada = st.sidebar.selectbox("Rosca (M)", list(rosas_data.keys()), index=10)
 
-# Passo da rosca
-passos_disponiveis = rosas_data[rosca_selecionada]["passos"]
+# Atualiza valores automaticamente conforme rosca
+dados_rosca = rosas_data[rosca_selecionada]
+d_eixo = dados_rosca["d_eixo"]
+passos_disponiveis = dados_rosca["passos"]
+chanfro_padrao = dados_rosca["chanfro_padrao"]
+pescoço_padrao = dados_rosca["pescoço_padrao"]
+
+# Passo
 passo_rosca = st.sidebar.selectbox("Passo da rosca (mm)", passos_disponiveis, index=0)
 
-# Diâmetro do eixo
-d_eixo = st.sidebar.number_input("Diâmetro do eixo (mm)", 4.0, 100.0, 24.0, 0.5)
+# Diâmetro do eixo (atualizado automaticamente)
+st.sidebar.write(f"**Diâmetro do eixo:** {d_eixo} mm")
 
-# Pescoço e chanfro
-largura_pescoço = st.sidebar.number_input("Largura do pescoço (mm)", 2.0, 10.0, 3.5, 0.1)
-chanfro_padrao = rosas_data[rosca_selecionada]["chanfro_padrao"]
+# Pescoço e chanfro (condicionados à rosca)
+largura_pescoço = st.sidebar.number_input("Largura do pescoço (mm)", 2.0, 10.0, pescoço_padrao, 0.1)
 chanfro = st.sidebar.number_input("Chanfro 45° (mm)", 0.2, 2.0, chanfro_padrao, 0.1)
 
 # ==================== CÁLCULOS ====================
@@ -136,4 +137,4 @@ dados = {
 df = pd.DataFrame(dados)
 st.dataframe(df, use_container_width=True)
 
-st.success("✅ Cálculos atualizados conforme norma!")
+st.success("✅ Valores atualizados automaticamente conforme a rosca selecionada!")
