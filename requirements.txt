@@ -1,9 +1,2 @@
 streamlit
-pdfplumber
-pdf2image
-pytesseract
-Pillow
-python-docx
-groq
-python-dotenv
 pandas
