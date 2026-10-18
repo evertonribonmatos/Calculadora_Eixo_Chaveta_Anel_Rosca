@@ -8,23 +8,23 @@ st.markdown("### DIN 6885 • DIN 471 • ISO 68-1 / ISO 965 (M4 até M39)")
 
 # ==================== DADOS DAS NORMAS ====================
 rosas_data = {
-    "M4":   {"d_eixo": 4.0, "passos": [0.7, 0.5], "chanfro_padrao": 0.3, "pescoço_padrao": 2.5},
-    "M5":   {"d_eixo": 5.0, "passos": [0.8, 0.5], "chanfro_padrao": 0.4, "pescoço_padrao": 2.5},
-    "M6":   {"d_eixo": 6.0, "passos": [1.0, 0.75, 0.5], "chanfro_padrao": 0.5, "pescoço_padrao": 2.5},
-    "M8":   {"d_eixo": 8.0, "passos": [1.25, 1.0, 0.75, 0.5], "chanfro_padrao": 0.5, "pescoço_padrao": 2.5},
-    "M10":  {"d_eixo": 10.0, "passos": [1.5, 1.25, 1.0, 0.75, 0.5], "chanfro_padrao": 0.5, "pescoço_padrao": 3.0},
-    "M12":  {"d_eixo": 12.0, "passos": [1.75, 1.5, 1.25, 0.75, 0.5], "chanfro_padrao": 0.5, "pescoço_padrao": 3.0},
-    "M14":  {"d_eixo": 14.0, "passos": [2.0, 1.5, 1.0, 0.75], "chanfro_padrao": 0.6, "pescoço_padrao": 3.0},
-    "M16":  {"d_eixo": 16.0, "passos": [2.0, 1.5, 1.0, 0.75], "chanfro_padrao": 0.6, "pescoço_padrao": 3.0},
-    "M18":  {"d_eixo": 18.0, "passos": [2.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.6, "pescoço_padrao": 3.0},
-    "M20":  {"d_eixo": 20.0, "passos": [2.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.5, "pescoço_padrao": 3.5},
-    "M22":  {"d_eixo": 22.0, "passos": [2.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7, "pescoço_padrao": 3.5},
-    "M24":  {"d_eixo": 24.0, "passos": [3.0, 2.0, 1.5, 1.0], "chanfro_padrao": 0.5, "pescoço_padrao": 3.5},
-    "M27":  {"d_eixo": 27.0, "passos": [3.0, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7, "pescoço_padrao": 3.5},
-    "M30":  {"d_eixo": 30.0, "passos": [3.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7, "pescoço_padrao": 3.5},
-    "M33":  {"d_eixo": 33.0, "passos": [3.5, 2.0, 1.5, 1.0], "chanfro_padrao": 0.7, "pescoço_padrao": 3.5},
-    "M36":  {"d_eixo": 36.0, "passos": [4.0, 3.0, 2.0, 1.0], "chanfro_padrao": 0.8, "pescoço_padrao": 4.0},
-    "M39":  {"d_eixo": 39.0, "passos": [4.0, 3.0, 2.0, 1.0], "chanfro_padrao": 0.8, "pescoço_padrao": 4.0},
+    "M4":   {"d_eixo": 4.0, "passos": [0.7, 0.5], "chanfro_ideal": 0.3, "pescoço_ideal": 2.5, "chanfro_min": 0.2, "pescoço_min": 2.0, "chanfro_max": 0.5, "pescoço_max": 4.0},
+    "M5":   {"d_eixo": 5.0, "passos": [0.8, 0.5], "chanfro_ideal": 0.4, "pescoço_ideal": 2.5, "chanfro_min": 0.3, "pescoço_min": 2.0, "chanfro_max": 0.6, "pescoço_max": 4.0},
+    "M6":   {"d_eixo": 6.0, "passos": [1.0, 0.75, 0.5], "chanfro_ideal": 0.5, "pescoço_ideal": 2.5, "chanfro_min": 0.4, "pescoço_min": 2.0, "chanfro_max": 0.8, "pescoço_max": 4.0},
+    "M8":   {"d_eixo": 8.0, "passos": [1.25, 1.0, 0.75, 0.5], "chanfro_ideal": 0.5, "pescoço_ideal": 2.5, "chanfro_min": 0.4, "pescoço_min": 2.0, "chanfro_max": 0.8, "pescoço_max": 4.0},
+    "M10":  {"d_eixo": 10.0, "passos": [1.5, 1.25, 1.0, 0.75, 0.5], "chanfro_ideal": 0.5, "pescoço_ideal": 3.0, "chanfro_min": 0.4, "pescoço_min": 2.0, "chanfro_max": 0.8, "pescoço_max": 5.0},
+    "M12":  {"d_eixo": 12.0, "passos": [1.75, 1.5, 1.25, 0.75, 0.5], "chanfro_ideal": 0.5, "pescoço_ideal": 3.0, "chanfro_min": 0.4, "pescoço_min": 2.0, "chanfro_max": 0.8, "pescoço_max": 5.0},
+    "M14":  {"d_eixo": 14.0, "passos": [2.0, 1.5, 1.0, 0.75], "chanfro_ideal": 0.6, "pescoço_ideal": 3.0, "chanfro_min": 0.5, "pescoço_min": 2.5, "chanfro_max": 0.9, "pescoço_max": 5.0},
+    "M16":  {"d_eixo": 16.0, "passos": [2.0, 1.5, 1.0, 0.75], "chanfro_ideal": 0.6, "pescoço_ideal": 3.0, "chanfro_min": 0.5, "pescoço_min": 2.5, "chanfro_max": 0.9, "pescoço_max": 5.0},
+    "M18":  {"d_eixo": 18.0, "passos": [2.5, 2.0, 1.5, 1.0], "chanfro_ideal": 0.6, "pescoço_ideal": 3.0, "chanfro_min": 0.5, "pescoço_min": 2.5, "chanfro_max": 0.9, "pescoço_max": 5.0},
+    "M20":  {"d_eixo": 20.0, "passos": [2.5, 2.0, 1.5, 1.0], "chanfro_ideal": 0.5, "pescoço_ideal": 3.5, "chanfro_min": 0.4, "pescoço_min": 2.5, "chanfro_max": 0.8, "pescoço_max": 6.0},
+    "M22":  {"d_eixo": 22.0, "passos": [2.5, 2.0, 1.5, 1.0], "chanfro_ideal": 0.7, "pescoço_ideal": 3.5, "chanfro_min": 0.5, "pescoço_min": 2.5, "chanfro_max": 0.9, "pescoço_max": 6.0},
+    "M24":  {"d_eixo": 24.0, "passos": [3.0, 2.0, 1.5, 1.0], "chanfro_ideal": 0.5, "pescoço_ideal": 3.5, "chanfro_min": 0.4, "pescoço_min": 2.5, "chanfro_max": 0.8, "pescoço_max": 6.0},
+    "M27":  {"d_eixo": 27.0, "passos": [3.0, 2.0, 1.5, 1.0], "chanfro_ideal": 0.7, "pescoço_ideal": 3.5, "chanfro_min": 0.5, "pescoço_min": 2.5, "chanfro_max": 0.9, "pescoço_max": 6.0},
+    "M30":  {"d_eixo": 30.0, "passos": [3.5, 2.0, 1.5, 1.0], "chanfro_ideal": 0.7, "pescoço_ideal": 3.5, "chanfro_min": 0.5, "pescoço_min": 2.5, "chanfro_max": 0.9, "pescoço_max": 7.0},
+    "M33":  {"d_eixo": 33.0, "passos": [3.5, 2.0, 1.5, 1.0], "chanfro_ideal": 0.7, "pescoço_ideal": 3.5, "chanfro_min": 0.5, "pescoço_min": 2.5, "chanfro_max": 0.9, "pescoço_max": 7.0},
+    "M36":  {"d_eixo": 36.0, "passos": [4.0, 3.0, 2.0, 1.0], "chanfro_ideal": 0.8, "pescoço_ideal": 4.0, "chanfro_min": 0.6, "pescoço_min": 3.0, "chanfro_max": 1.0, "pescoço_max": 7.0},
+    "M39":  {"d_eixo": 39.0, "passos": [4.0, 3.0, 2.0, 1.0], "chanfro_ideal": 0.8, "pescoço_ideal": 4.0, "chanfro_min": 0.6, "pescoço_min": 3.0, "chanfro_max": 1.0, "pescoço_max": 7.0},
 }
 
 def get_chaveta(d):
@@ -51,23 +51,60 @@ def get_anel(d):
 st.sidebar.header("Dados de Entrada")
 
 rosca_selecionada = st.sidebar.selectbox("Rosca (M)", list(rosas_data.keys()), index=10)
-
-# Atualiza valores automaticamente conforme rosca
 dados_rosca = rosas_data[rosca_selecionada]
+
 d_eixo = dados_rosca["d_eixo"]
 passos_disponiveis = dados_rosca["passos"]
-chanfro_padrao = dados_rosca["chanfro_padrao"]
-pescoço_padrao = dados_rosca["pescoço_padrao"]
+chanfro_ideal = dados_rosca["chanfro_ideal"]
+pescoço_ideal = dados_rosca["pescoço_ideal"]
+chanfro_min = dados_rosca["chanfro_min"]
+pescoço_min = dados_rosca["pescoço_min"]
+chanfro_max = dados_rosca["chanfro_max"]
+pescoço_max = dados_rosca["pescoço_max"]
 
-# Passo
 passo_rosca = st.sidebar.selectbox("Passo da rosca (mm)", passos_disponiveis, index=0)
 
-# Diâmetro do eixo (atualizado automaticamente)
 st.sidebar.write(f"**Diâmetro do eixo:** {d_eixo} mm")
 
-# Pescoço e chanfro (condicionados à rosca)
-largura_pescoço = st.sidebar.number_input("Largura do pescoço (mm)", 2.0, 10.0, pescoço_padrao, 0.1)
-chanfro = st.sidebar.number_input("Chanfro 45° (mm)", 0.2, 2.0, chanfro_padrao, 0.1)
+# ==================== PESOÇO E CHANFRO COM CORES ====================
+st.sidebar.subheader("Pescoço e Chanfro (condicionado)")
+
+# Pescoço
+largura_pescoço = st.sidebar.slider(
+    "Largura do pescoço (mm)",
+    min_value=pescoço_min,
+    max_value=pescoço_max,
+    value=pescoço_ideal,
+    step=0.1
+)
+
+# Chanfro
+chanfro = st.sidebar.slider(
+    "Chanfro 45° (mm)",
+    min_value=chanfro_min,
+    max_value=chanfro_max,
+    value=chanfro_ideal,
+    step=0.1
+)
+
+# ==================== INDICADORES DE COR ====================
+col1, col2 = st.sidebar.columns(2)
+
+with col1:
+    if largura_pescoço == pescoço_ideal:
+        st.success(f"✅ Ideal: {pescoço_ideal} mm")
+    elif pescoço_min <= largura_pescoço <= pescoço_max:
+        st.warning(f"⚠️ Dentro da tolerância")
+    else:
+        st.error("❌ Fora da tolerância")
+
+with col2:
+    if chanfro == chanfro_ideal:
+        st.success(f"✅ Ideal: {chanfro_ideal} mm")
+    elif chanfro_min <= chanfro <= chanfro_max:
+        st.warning(f"⚠️ Dentro da tolerância")
+    else:
+        st.error("❌ Fora da tolerância")
 
 # ==================== CÁLCULOS ====================
 st.header("1. Chaveta (DIN 6885)")
@@ -137,4 +174,4 @@ dados = {
 df = pd.DataFrame(dados)
 st.dataframe(df, use_container_width=True)
 
-st.success("✅ Valores atualizados automaticamente conforme a rosca selecionada!")
+st.success("✅ Valores dentro da tolerância conforme norma!")
